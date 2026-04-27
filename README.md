@@ -2,6 +2,13 @@
 
 A collection of custom slash commands for [Claude Code](https://claude.ai/code) — drop any skill into your project and invoke it with `/skill-name`.
 
+<br/>
+
+[![Website](https://img.shields.io/badge/roeeaizman.com-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://roeeaizman.com/#guides)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/roeea)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/roeeaiautomation/)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@roeea2)
+
 ---
 
 ## What are Skills?
@@ -54,14 +61,14 @@ your-project/
 ```bash
 mkdir -p .claude/commands
 curl -o .claude/commands/transcribe-podcast.md \
-  https://raw.githubusercontent.com/roeea2/Skills/main/transcribe-podcast/transcribe-podcast.md
+  https://raw.githubusercontent.com/roeea2/transcribe-podcast-skill/main/transcribe-podcast/transcribe-podcast.md
 ```
 
 ### Option B — Clone the whole repo
 
 ```bash
-git clone https://github.com/roeea2/Skills
-cp Skills/transcribe-podcast/transcribe-podcast.md .claude/commands/
+git clone https://github.com/roeea2/transcribe-podcast-skill
+cp transcribe-podcast-skill/transcribe-podcast/transcribe-podcast.md .claude/commands/
 ```
 
 Then invoke with `/transcribe-podcast` inside Claude Code.
