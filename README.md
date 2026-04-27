@@ -2,6 +2,8 @@
 
 A collection of custom slash commands for [Claude Code](https://claude.ai/code) — drop any skill into your project and invoke it with `/skill-name`.
 
+[עברית 🇮🇱](./README.he.md)
+
 <br/>
 
 [![Website](https://img.shields.io/badge/roeeaizman.com-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://roeeaizman.com/#guides)
@@ -54,9 +56,21 @@ your-project/
 
 ---
 
-## Installation
+## Installation on Claude Code
 
-### Option A — Copy a single skill
+### Step 1 — Get Claude Code
+
+If you don't have Claude Code yet, install it:
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+Or download the [Claude Code desktop app](https://claude.ai/code).
+
+### Step 2 — Add the skill to your project
+
+Open a terminal inside your project folder and run:
 
 ```bash
 mkdir -p .claude/commands
@@ -64,14 +78,35 @@ curl -o .claude/commands/transcribe-podcast.md \
   https://raw.githubusercontent.com/roeea2/transcribe-podcast-skill/main/transcribe-podcast/transcribe-podcast.md
 ```
 
-### Option B — Clone the whole repo
+> **Want it available in every project?** Install it globally instead:
+> ```bash
+> mkdir -p ~/.claude/commands
+> curl -o ~/.claude/commands/transcribe-podcast.md \
+>   https://raw.githubusercontent.com/roeea2/transcribe-podcast-skill/main/transcribe-podcast/transcribe-podcast.md
+> ```
+
+### Step 3 — Run it
+
+Open Claude Code in your project directory and type:
+
+```
+/transcribe-podcast
+```
+
+Or pass the URL directly:
+
+```
+/transcribe-podcast https://www.bbc.co.uk/sounds/play/...
+```
+
+Claude will guide you through the rest — it installs [Whisper](https://github.com/openai/whisper) automatically if needed.
+
+### Alternative — Clone the whole repo
 
 ```bash
 git clone https://github.com/roeea2/transcribe-podcast-skill
 cp transcribe-podcast-skill/transcribe-podcast/transcribe-podcast.md .claude/commands/
 ```
-
-Then invoke with `/transcribe-podcast` inside Claude Code.
 
 ---
 
